@@ -1,2 +1,11 @@
+# Variables
+PYTHON=python3
+SRC_DIR=src
+TEST_DIR=tests
+TEST_RUNNER=pytest
+
+# Define the test target
 test:
-	@echo "Running tests..."
+    $(PYTHON) -m $(TEST_RUNNER) $(TEST_DIR)
+
+.PHONY: test

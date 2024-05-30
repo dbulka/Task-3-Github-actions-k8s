@@ -6,14 +6,6 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    # services:
-    #   database:
-    #     image: mysql:8.0
-    #     env:
-    #       MYSQL_ROOT_PASSWORD: password
-    #       MYSQL_DATABASE: database
-    #     ports:
-    #       - 3306:3306
     steps:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -25,9 +17,6 @@ jobs:
 
       - name: Install dependencies with Composer
         uses: ramsey/composer-install@v2
-
-      # - name: Execute database migrations
-      #   run: bin/console doctrine:migrations:migrate --no-interaction
 
       - name: Run tests
         run: make test
