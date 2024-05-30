@@ -1,3 +1,4 @@
-# Define the test target
+.PHONY: test
+
 test:
-    python3 -m pytest tests
+    python -m unittest discover -s tests
