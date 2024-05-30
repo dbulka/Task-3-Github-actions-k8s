@@ -1,2 +1,2 @@
 pytest==8.2.1
-math_operations==3.12.3
+math_operations==2.6
