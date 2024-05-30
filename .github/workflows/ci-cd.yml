@@ -18,5 +18,14 @@ jobs:
       - name: Install dependencies with Composer
         uses: ramsey/composer-install@v2
 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Use '3.x' to select the latest Python 3.x version
+
+      # Additional steps as needed, such as installing dependencies and running tests
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Run tests
         run: make test
