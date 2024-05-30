@@ -6,6 +6,6 @@ TEST_RUNNER=pytest
 
 # Define the test target
 test:
-    $(PYTHON) -m $(TEST_RUNNER) $(TEST_DIR)
+    python3 -m pytest tests
 
 .PHONY: test
