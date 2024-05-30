@@ -30,4 +30,4 @@ jobs:
       #   run: bin/console doctrine:migrations:migrate --no-interaction
 
       - name: Run tests
-        run: make check
+        run: make test
