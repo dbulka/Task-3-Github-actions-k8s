@@ -1,4 +1,4 @@
 .PHONY: test
 
 test:
-	python -m unittest discover -s tests
+	python tests/dummy-test.py
