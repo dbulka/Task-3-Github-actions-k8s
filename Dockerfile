@@ -6,6 +6,8 @@ WORKDIR /var/flaskapp
 
 COPY .  .
 
+COPY requirements.txt .
+
 RUN apk update
 
 RUN apk add python3
