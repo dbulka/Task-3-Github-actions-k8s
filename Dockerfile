@@ -1,12 +1,12 @@
-FROM python:3.8
+FROM alpine:latest
+
+RUN apk update && apk upgrade
 
 RUN mkdir /var/flaskapp
 
 WORKDIR /var/flaskapp
 
 COPY .  .
-
-RUN apk update
 
 RUN apk add python3
 
