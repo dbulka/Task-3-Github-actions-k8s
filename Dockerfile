@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM python:3.8
 
 RUN mkdir /var/flaskapp
 
@@ -8,9 +8,9 @@ COPY .  .
 
 RUN apk update
 
-RUN apk add python3
+RUN apk add python
 
-RUN python3 -m pip install --upgrade pip
+RUN python -m pip install --upgrade pip
 
 RUN pip install -r requirement.txt
 
