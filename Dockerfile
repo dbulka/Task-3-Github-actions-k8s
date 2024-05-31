@@ -6,9 +6,9 @@ WORKDIR /var/flaskapp
 
 COPY .  .
 
-RUN python -m pip install --upgrade pip
+RUN python3 -m pip3 install --upgrade pip3
 
-RUN pip install -r requirement.txt
+RUN pip3 install -r requirement.txt
 
 EXPOSE 5000 
 
