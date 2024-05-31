@@ -6,13 +6,13 @@ WORKDIR /var/flaskapp
 
 COPY .  .
 
-COPY requirements.txt .
-
 RUN apk update
 
 RUN apk add python3
 
-RUN pip3 install -r requirement.txt
+RUN python3 -m pip install --upgrade pip
+
+RUN pip install -r requirement.txt
 
 EXPOSE 5000 
 
