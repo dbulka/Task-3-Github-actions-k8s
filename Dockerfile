@@ -8,6 +8,8 @@ WORKDIR /var/flaskapp
 
 COPY .  .
 
+FROM python:3.8
+
 RUN apk add python3
 
 RUN pip3 install -r requirement.txt
