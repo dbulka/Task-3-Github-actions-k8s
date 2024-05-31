@@ -1,8 +1,5 @@
-# Use the Alpine Linux base image
-FROM alpine:latest
-
-# Install Python 3 and pip3
-RUN apk update && apk add --no-cache python3 py3-pip
+# Use the official Python base image
+FROM python:3.8
 
 # Set the working directory in the container
 WORKDIR /app
@@ -11,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000 
 
