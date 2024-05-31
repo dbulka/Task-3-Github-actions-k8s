@@ -6,10 +6,6 @@ WORKDIR /var/flaskapp
 
 COPY .  .
 
-RUN apk update
-
-RUN apk add python
-
 RUN python -m pip install --upgrade pip
 
 RUN pip install -r requirement.txt
