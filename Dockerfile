@@ -1,6 +1,8 @@
 # Use the Alpine Linux base image
 FROM alpine:latest
 
+FROM python:3.8
+
 # Install Python 3 and pip
 RUN apk update && apk add --no-cache python3 py3-pip
 
