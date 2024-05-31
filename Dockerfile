@@ -1,6 +1,10 @@
-FROM alpine:latest
+# Use the Alpine Linux base image
+FROM python:3.9-alpine
 
-RUN apk update && apk upgrade
+# Install build dependencies and Python packages
+RUN apk update && \
+    apk add --no-cache gcc musl-dev linux-headers && \
+    pip install --no-cache-dir --upgrade pip
 
 RUN mkdir /var/flaskapp
 
