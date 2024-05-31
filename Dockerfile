@@ -6,7 +6,9 @@ WORKDIR /var/flaskapp
 
 COPY .  .
 
-RUN python3 -m pip3 install --upgrade pip3
+RUN apk update
+
+RUN apk add python3
 
 RUN pip3 install -r requirement.txt
 
