@@ -12,7 +12,7 @@ COPY .  .
 
 RUN apk add python3
 
-RUN pip3 install -r requirement.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000 
 
